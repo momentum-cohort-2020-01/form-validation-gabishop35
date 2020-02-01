@@ -1,14 +1,10 @@
-// console.log('Add validation!');
+let inputFields = document.querySelectorAll("input") 
 
-let inputFields = document.querySelectorAll(".field") 
-
-let submitButton = document.querySelector("#submit-button")
+// let submitButton = document.querySelector("#submit-button")
 
 let parkingForm = document.querySelector("#parking-form")
 
-
-
-
+let input = document.querySelectorAll(".input-field")
 
 
 
@@ -16,15 +12,50 @@ parkingForm.addEventListener("submit", function(e) {
     e.preventDefault();
     for(let field of inputFields) {
         if (field.value.length > 0) {
-        field.parentElement.classList.add("input-valid")
-        }
+            if (field.parentElement.classList.contains("input-valid")) {
+            }
+        //  else  {(field.parentElement.classList.add("input-valid")) {}
+    
+            
         else {
-            field.parentElement.classList.add("input-invalid")
-        }
-    }
-    console.log(e);
+            (field.parentElement.classList.add("input-invalid"))}
 
-});
+            
+            let newEl = document.createElement("div")
+            let text = document.createTextNode("Required field")
+            let parent = field.parentNode 
+            newEl.appendChild(text)
+            parent.appendChild(newEl)
+               
+                
+                }
+
+            // else {
+            // newEl.remove()
+}})
+
+
+// parkingForm.addEventListener("submit", function(e) {
+//     e.preventDefault();
+//     for(let field of inputFields) {
+//         if (field.value.length === 0) {
+//         name.setAttribute("required", "")
+        // inputFields.innerText = "required"
+//         }
+//         // }
+//         //     field.parentElement.classList.add("input-invalid")  
+//         //     name.innerText = "required"
+//     }
+            
+// })
+
+// name.getAttribute()
+
+// name.attribute.required = true
+
+// inputFields.addEventListener("submit", function(){
+//     alert("is required")
+// })
 
 // let box = document.querySelector("#name-field")
 
