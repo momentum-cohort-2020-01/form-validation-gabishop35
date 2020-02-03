@@ -12,13 +12,13 @@ parkingForm.addEventListener("submit", function(e) {
     e.preventDefault();
     for(let field of inputFields) {
         if (field.value.length > 0) {
-            if (field.parentElement.classList.contains("input-valid")) {
-            }
-        //  else  {(field.parentElement.classList.add("input-valid")) {}
-    
+            field.parentElement.classList.contains("input-valid")
             
+        //  if  (field.parentElement.classList.add("input-valid"))
+        //         {}
+            }
         else {
-            (field.parentElement.classList.add("input-invalid"))}
+            field.parentElement.classList.add("input-invalid")
 
             
             let newEl = document.createElement("div")
